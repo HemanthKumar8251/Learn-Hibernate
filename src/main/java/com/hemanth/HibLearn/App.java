@@ -21,6 +21,6 @@ public class App
 //        session.persist(s);
         s = session.get(Student.class, 557);
         tx.commit();
-        System.out.println(s);
+        System.out.println(s); 
     }
 }
