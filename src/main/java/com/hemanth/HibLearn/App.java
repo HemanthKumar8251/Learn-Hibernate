@@ -11,14 +11,16 @@ public class App
     public static void main( String[] args )
     {
         Student s = new Student();
-        s.setSid(524);
-        s.setSname("Uday");
-        s.setMobile("9888573884");
+//        s.setSid(557);
+//        s.setSname("Hemanth");
+//        s.setMobile("7396144429");
         
         SessionFactory factory = new Configuration().configure().addAnnotatedClass(Student.class).buildSessionFactory();
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
-        session.persist(s);
+//        session.persist(s);
+        s = session.get(Student.class, 557);
         tx.commit();
+        System.out.println(s);
     }
 }

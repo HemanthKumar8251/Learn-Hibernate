@@ -29,4 +29,9 @@ public class Student {
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
+	@Override
+	public String toString() {
+		return "Student [sid=" + sid + ", sname=" + sname + ", mobile=" + mobile + "]";
+	}
+	
 }
