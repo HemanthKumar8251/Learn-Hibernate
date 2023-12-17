@@ -9,20 +9,22 @@ import jakarta.persistence.Table;
 public class Student {
 	@Id
 	private int sid;
-	private String sname;
+	private StudentName sname;
 	private String mobile;
+	
+	public void setSname(StudentName sname) {
+		this.sname = sname;
+	}
+	public StudentName getSname() {
+		return sname;
+	}
 	public int getSid() {
 		return sid;
 	}
 	public void setSid(int sid) {
 		this.sid = sid;
 	}
-	public String getSname() {
-		return sname;
-	}
-	public void setSname(String sname) {
-		this.sname = sname;
-	}
+	
 	public String getMobile() {
 		return mobile;
 	}
