@@ -2,6 +2,7 @@ package com.hemanth.HibLearn;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -11,7 +12,21 @@ public class Student {
 	private int sid;
 	private StudentName sname;
 	private String mobile;
-	
+	@OneToOne
+	private Laptop lappy;
+	public Student(int sid, StudentName sname, String mobile, Laptop lappy) {
+		super();
+		this.sid = sid;
+		this.sname = sname;
+		this.mobile = mobile;
+		this.lappy = lappy;
+	}
+	public Laptop getLappy() {
+		return lappy;
+	}
+	public void setLappy(Laptop lappy) {
+		this.lappy = lappy;
+	}
 	public void setSname(StudentName sname) {
 		this.sname = sname;
 	}

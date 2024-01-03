@@ -7,6 +7,13 @@ public class StudentName {
 	private String fname;
 	private String mname;
 	private String lname;
+	
+//	public StudentName(String fname, String mname, String lname) {
+//		this.fname = fname;
+//		this.mname = mname;
+//		this.lname = lname;
+//	}
+	
 	public String getFname() {
 		return fname;
 	}
